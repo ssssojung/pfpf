@@ -1,0 +1,185 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@font-face {
+  font-family: 'LeferiPoint-WhiteObliqueA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+//회전애니메이션
+$rotationDuration: 20s;
+$hoverDuration: 0.3s;
+$easeIn: cubic-bezier(0.32, 0, 0.67, 0);
+$easeOut: cubic-bezier(0.33, 1, 0.68, 1);
+// 공통변수
+:root {
+    --main-color: #2C3359;
+    --sub-color: #ACD1F2;
+    --accent-color: #66CADA;
+    
+    --B-Font:'Archivo Black';
+    --C-Font:'Alatsi';
+    --M-Font:'Inter Tight';
+    --P-Font:'Abril Fatface';
+    --H-Font:'';
+  }
+  // 브라우저 창 width가 767보다 작아지는 순간 적용(모바일)
+  @media all and(max-width: 768px){
+  }
+  //스크롤 안보이게 하는 css
+  .opt-content {
+    // max-height: calc(100vh - 342px);
+    max-height: calc(100vh - 242px);
+    overflow: auto;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+  }
+  .opt-content::-webkit-scrollbar {
+      display: none; /* 크롬, 사파리, 오페라, 엣지 */
+  }
+  .DJA{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body{
+    background-color: var(--main-color);
+    color: white;
+    li{list-style: none;}
+    a{text-decoration: none; color: white;}
+    #header{
+      left: 0;
+      right: 0;
+      // #nav{
+
+      // }
+    }
+    #home{
+      min-height:100vh;
+      background-size: cover; 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../../public/img/main_bg2.png);
+      .textBox{
+        margin-top: 200px;
+        position: relative;
+        width: 600px;
+        text-align: start;
+        
+      }
+      h1{
+        font-family: var(--P-Font);
+        font-size: 10rem;
+      }
+      p{
+       font-family: var(--M-Font);
+       font-size: 1rem;
+      }
+    }
+
+    #about{
+      min-height:100vh;
+      position: relative;
+      .gradient{
+        background: linear-gradient(black 10%, transparent); min-height: 30vh; min-width: 100vw;
+      }
+      .bg_B_Font{
+        font-family:var(--B-Font);
+        font-size: 30vw;
+        opacity: 20%;
+        position: absolute;
+        top: 20%;
+        left: 0;right: 0;
+        margin: 0 auto;
+        // padding&margin도 없는데 공백이 너무 큼, 줄일 수 있는 방법
+  
+      }
+      .card_F{
+        width: 22rem;
+        height: 45rem;
+        background-color: #fff;
+        border: 7px solid var(--sub-color);
+        position: absolute;
+        top: 21%;
+        left: 38%;
+        z-index: 1;
+        transform: rotate(-30deg);
+        // 마지막에 방향도 바꿀것
+        .card_B_text{
+          font-family: var(--C-Font);
+          font-size: 2rem;
+          color: var(--main-color);
+          text-shadow: -2px 0px var(--sub-color),;
+          span{color: var(--accent-color);}
+        }
+      }
+    }
+
+    #intro{
+      min-height:100vh;
+      .god1{
+        left: 0;right: 0;
+        margin: 0 auto;
+        width: 50%;
+      }
+      .god2{
+        bottom: 70px;
+      }
+      .god3{
+
+      }
+      .god4{
+
+      }
+    }
+
+    #skill{
+      min-height:100vh;
+    }
+    #work{
+      min-height:100vh;
+    }
+    #contact{
+      min-height:100vh;
+      label{    font-family: ui-serif;letter-spacing: -1px;}
+        #hd h2{font-size: 25px; letter-spacing:20px; font-family: ui-serif;}
+        #agreen:checked + label::before{color: red;}
+        #contact [type=text]{border: 0; width: 100%; background-color: transparent;}
+        .blueline{border-bottom: 2px solid white; }
+        .blueborder{border: 2px solid white; margin: 3px;}
+        #contact > ul > li{ padding: 1rem 0;}
+        .js-selectDiv{transition: 0.5s; height: 40px; z-index: 9;}
+        .js-selectDiv.on{height: 150px;}
+        .js-selectDiv.on p i{
+            transform: rotate(180deg);
+        }
+        #popagree{
+            max-width: 600px; width: calc(100%-60px); 
+            margin: auto; left: 0; right: 0; top: 50%; transform: translateY(-50%);
+            display: none;
+        }
+        body.show::before{
+            content: "";
+            position: fixed;
+            left: 0; right: 0; top: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+        body.show #popagree{ display: block; z-index: 12;}
+        .bg-box{background-color: transparent; font-size: 1rem;}
+        .sendBox{
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+        }
+        .sendBox:hover{background-color: #5F6F94; border: 2px solid #5F6F94}
+        input{color: white; caret-color: transparent; outline: none;}
+        input::placeholder{color: whitesmoke;opacity: 50%; padding: 0;}
+    }
+  }
+  
