@@ -2,8 +2,8 @@ import React from 'react';
 
 function Contact(props) {
     return (
-        <div id="contact" href="#co_S" className='container'>
-            <form  className="container"action="데이터를 저장해줄 서버페이지경로" method="post" name="contact" id="contact">
+        <div id={props.contentid} className='container'>
+            <form action="데이터를 저장해줄 서버페이지경로" method="post" name="contact" id="contact">
     <input type="hidden" name="area"/>
     <ul className="row">
         <li className="col-md-4 ">

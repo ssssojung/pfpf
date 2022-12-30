@@ -53,9 +53,8 @@ $easeOut: cubic-bezier(0.33, 1, 0.68, 1);
     #header{
       left: 0;
       right: 0;
-      // #nav{
-
-      // }
+      z-index: 10000;
+      a:hover{color:var(--accent-color )!important}
     }
     #home{
       min-height:100vh;
@@ -83,57 +82,104 @@ $easeOut: cubic-bezier(0.33, 1, 0.68, 1);
     #about{
       min-height:100vh;
       position: relative;
-      .gradient{
-        background: linear-gradient(black 10%, transparent); min-height: 30vh; min-width: 100vw;
-      }
       .bg_B_Font{
         font-family:var(--B-Font);
         font-size: 30vw;
         opacity: 20%;
         position: absolute;
-        top: 20%;
         left: 0;right: 0;
-        margin: 0 auto;
-        // padding&margin도 없는데 공백이 너무 큼, 줄일 수 있는 방법
+        margin: 0  auto;
+        
   
       }
       .card_F{
-        width: 22rem;
-        height: 45rem;
+        width: 21rem;
+        height: 41rem;
         background-color: #fff;
         border: 7px solid var(--sub-color);
         position: absolute;
-        top: 21%;
-        left: 38%;
+        top: 10%;
+        left: 0;right: 0;
+        margin: 0 auto;
         z-index: 1;
-        transform: rotate(-30deg);
+        
         // 마지막에 방향도 바꿀것
         .card_B_text{
           font-family: var(--C-Font);
-          font-size: 2rem;
+          font-size: 2.5rem;
           color: var(--main-color);
-          text-shadow: -2px 0px var(--sub-color),;
+          // color:transparent;
+          // -webkit-text-stroke: 0.5px solid #000000; 
           span{color: var(--accent-color);}
+          position: absolute;
+          left: 0; right: 0;
+          top: 1rem;
+          margin: 0 auto;
+          text-shadow: -0.7px 0px #000, 0px 0.7px #000, 0.7px 0px #000, 0px -0.7px #000;
         }
+        .card_photo{
+          max-width: 17rem;
+          position: absolute;
+          top: 39%;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          border: 5px solid var(--accent-color);
+        }
+        #circle_btn{
+          position: relative;
+          width: 210px;
+          height: 210px;
+          margin: 0 auto;
+          z-index: 3;
+          .btn_rotate{
+  
+            animation: rotate_image 40s linear infinite;
+            transform-origin: 50% 50%;
+          }
+          @keyframes rotate_image{
+            100% {
+                transform: rotate(360deg);
+              }
+          }
+          span{
+            color: var(--accent-color);
+            font-family: var(--I-Font);
+            position: absolute;
+          }
+          .about_arrow{
+            position: absolute;
+  
+          }
+          .about_arrow_H{
+            position: absolute;
+            top: 0; left: 0;
+            display: none;
+          }
+          .about_arrow:hover .about_arrow_H{
+            display: block;
+          }
       }
+    }
     }
 
     #intro{
       min-height:100vh;
-      .god1{
-        left: 0;right: 0;
-        margin: 0 auto;
-        width: 50%;
-      }
-      .god2{
-        bottom: 70px;
-      }
-      .god3{
+      // position: absolute;
+      // .god1{
 
-      }
-      .god4{
+      //   // left: 0;right: 0;
+      //   // margin: 0 auto;
+      // }
+      // .god2{
+      //   bottom: 70px;
+      // }
+      // .god3{
 
-      }
+      // }
+      // .god4{
+
+      // }
     }
 
     #skill{

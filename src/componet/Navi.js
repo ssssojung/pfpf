@@ -4,22 +4,22 @@ import React from 'react';
 function Navi(props) {
     const naviDb = [{
         naviText : "ABOUT ME",
-        naviId : "#ab_S"
+        naviId : "#about"
       },
       {
         naviText : "SKILLS",
-        naviId : "#sk_S"
+        naviId : "#skill"
                       },
       {
         naviText : "WORK",
-        naviId : "#wo_S"
+        naviId : "#work"
                       },
       {
         naviText : "CONTACT",
-        naviId : "#co_S"
+        naviId : "#contact"
                       }]
     return (
-        <div className="d-flex px-4 mb-0 " items={[naviDb[0].naviId,naviDb[1].naviId,naviDb[2].naviId,naviDb[3].naviId]} >
+        <div className="d-none d-md-flex px-4 mb-0 " items={[naviDb[0].naviId,naviDb[1].naviId,naviDb[2].naviId,naviDb[3].naviId]} >
      
         {
           naviDb.map((item, index) =>{

@@ -6,14 +6,16 @@
             "worktime" : "4주",
             "co" : "단독작업",
             "app" : ["illust","photoshop","v-code"],
-            "cls" : "react"
+            "cls" : "react ",
+            "link":"../../img/work1.png"
         },
         {
             "worktitle" : "부트스트랩 퍼블리싱",
             "worktime" : "1주",
             "co" : "단독작업",
             "app" : ["v-code"],
-            "cls" : "boot"
+            "cls" : "boot",
+            "link": "../../img/work2.png"
         }
     ]
 }

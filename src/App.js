@@ -16,11 +16,11 @@ function App() {
     <div className="App">
     <Header></Header>
     <Home></Home>
-    <About></About>
-    <Intro></Intro>
-    <Skills></Skills>
-    <Work ></Work>
-    <Contact></Contact>
+    <About contentid="about"></About>
+    <Intro contentid="intro"></Intro>
+    <Skills contentid="skill"></Skills>
+    <Work contentid="work"></Work>
+    <Contact contentid="contact"></Contact>
     <QuickMenu></QuickMenu>
     </div>
   );

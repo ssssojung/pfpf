@@ -10,7 +10,7 @@ import workswiperjson from '../json/work_info.json';
 function Work(props) {
   const swiperinfo = workswiperjson.workswiperjson;
     return (
-        <div href="#work">
+        <div id={props.contentid}>
             <Swiper className='workSection'
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 spaceBetween={0}
@@ -31,7 +31,8 @@ function Work(props) {
                     {
                     swiperinfo.map( ( item, index ) => {
                             return(
-                            <SwiperSlide className={item.cls} key={'sw'+index}>{item.worktitle}</SwiperSlide>
+                            <SwiperSlide className={item.cls} key={'sw'+index}>
+                                <img  src={item.link} alt="" />{item.worktitle}</SwiperSlide>
                             )
                         }
                     )
